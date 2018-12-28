@@ -1,0 +1,19 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "\"This is a test directory to learn git and node\"",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bheemsetty/nodetest.git"
+  },
+  "author": "Mahesh Bheemsetty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bheemsetty/nodetest/issues"
+  },
+  "homepage": "https://github.com/bheemsetty/nodetest#readme"
+}
