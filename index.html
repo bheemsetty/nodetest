@@ -59,8 +59,9 @@
               your culinary senses!
             </p>
           </div>
-          <div class="col-12 col-sm align-self-center">
+          <div class="col-12 col-sm-6 align-self-center">
               <img src="img/logo.png" class="img-fluid">
+              <a class="btn btn-sm btn-warning" href="#reserveTable">Reserve Table</a>
           </div>
         </div>
       </div>
@@ -91,13 +92,20 @@
           <h3>This Month's Promotions</h3>
         </div>
         <div class="col-12 col-sm  col-md">
-          <h2>Weekend Grand Buffet</h2>
-          <p>
-            Featuring mouthwatering combinations with a choice of five different
-            salads, six enticing appetizers, six main entrees and five choicest
-            desserts. Free flowing bubbly and soft drinks. All for just $19.99
-            per person
-          </p>
+          <div class="media">
+             
+              <div class="media-body">
+                  <h2 class="mt-0">Weekend Grand Buffet<span class="badge badge-danger">NEW</span></h2>
+                  <p class="d-none d-sm-block">
+                      Featuring mouthwatering combinations with a choice of five different
+                      salads, six enticing appetizers, six main entrees and five choicest
+                      desserts. Free flowing bubbly and soft drinks. All for just $19.99
+                      per person
+                    </p>
+              </div>
+              <img class="d-flex mr-3 img-thumbnail align-self-center float-right"
+              src="img/buffet.png" alt="buffet">
+          </div>
         </div>
       </div>
 
@@ -121,6 +129,59 @@
         </div>
       </div>
       </div>
+      <div class="row row-content align-item-center"  id="reserveTable">
+        <div class="col-12 col-sm-2"></div>
+        <div class="col-12 col-sm-8">
+            <div class="card">
+                <h3 class="card-header bg-warning text-white"> Reserve a Table</h3>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group row">
+                      <label for="numberOfGuests" class="col-sm-2 col-form-label"> Number of Guests</label>
+                      <div class="col-sm-6">
+                        <label class="radio-inline">
+                          <input type="radio" name="numberOfGuests1">1
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="numberOfGuests2">2
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="numberOfGuests3">3
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="numberOfGuests4">4
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="numberOfGuests5">5
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="numberOfGuests6">6
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="date" class="col-sm-2 col-form-label"> Date and Time </label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="submit" class="btn btn-primary">
+                                Reserve
+                            </button>
+                        </div> 
+                    </div> 
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
     </div>
 
     <footer class="footer">
