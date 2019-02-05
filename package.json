@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lite": "lite-server"
+    "lite": "lite-server",
+    "scss": "node-sass -o css/ css/"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,8 @@
   },
   "homepage": "https://github.com/bheemsetty/nodetest#readme",
   "devDependencies": {
-    "lite-server": "^2.4.0"
+    "lite-server": "^2.4.0",
+    "node-sass": "^4.7.2"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
