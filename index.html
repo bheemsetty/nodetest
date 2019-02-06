@@ -36,7 +36,9 @@
               Contact</a></li>
         </ul>
         <span class="navbar-text">
-          <a data-toggle="modal" data-target="#loginModal">
+            
+            <!-- data-toggle="modal" data-target="#loginModal" -->
+          <a href="javascript:void(0)" id="btnLogin">
             <span class="fa fa-sign-in"></span> Login</a>
         </span>
       </div>
@@ -162,7 +164,8 @@
           <img src="img/logo.png" class="img-fluid">
         </div>
         <div class="col-12 col-sm-3 align-self-center">
-          <a data-toggle="modal" class="btn btn-warning d-block" data-target="#ReserveModal">Reserve Table</a>
+            <!-- data-toggle="modal" data-target="#ReserveModal" -->
+          <a id="btnReserve" href="javascript:void(0)" class="btn btn-warning d-block" >Reserve Table</a>
         </div>
       </div>
     </div>
@@ -277,21 +280,30 @@
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $('#mycarousel').carousel({interval:2000});
-      $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-    });
+    $(document).ready(function () {
+        $('#mycarousel').carousel({ interval: 2000 });
+        $("#carouselButton").click(function () {
+          if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+            $("#mycarousel").carousel('pause');
+            $("#carouselButton").children("span").removeClass('fa-pause');
+            $("#carouselButton").children("span").addClass('fa-play');
+          }
+          else if ($("#carouselButton").children("span").hasClass('fa-play')) {
+            $("#mycarousel").carousel('cycle');
+            $("#carouselButton").children("span").removeClass('fa-play');
+            $("#carouselButton").children("span").addClass('fa-pause');
+          }
+        });
+
+        $('#btnLogin').click(function () {
+          $('#loginModal').modal('show');
+        })
+
+        $('#btnReserve').click(function () {
+          $('#ReserveModal').modal('show');
+        })
+
+      });
   </script>
 
 </body>
