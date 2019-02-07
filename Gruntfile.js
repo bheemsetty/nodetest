@@ -49,7 +49,7 @@ module.exports = function (grunt) {
                  dot: true,
                  cwd: './',
                  src: ['*.html'],
-                 dest: 'dist'
+                 dest: 'distGrunt'
              }]                
          },
          fonts: {
@@ -60,14 +60,14 @@ module.exports = function (grunt) {
                  dot: true,
                  cwd: 'node_modules/font-awesome',
                  src: ['fonts/*.*'],
-                 dest: 'dist'
+                 dest: 'distGrunt'
              }]
          }
      },
 
      clean: {
          build: {
-             src: [ 'dist/']
+             src: [ 'distGrunt/']
          }
      },
      imagemin: {
@@ -76,14 +76,15 @@ module.exports = function (grunt) {
                  expand: true,                  // Enable dynamic expansion
                  cwd: './',                   // Src matches are relative to this path
                  src: ['img/*.{png,jpg,gif}'],   // Actual patterns to match
-                 dest: 'dist/'                  // Destination path prefix
+                 dest: 'distGrunt/'                  // Destination path prefix
              }]
          }
      },
 
      useminPrepare: {
          foo: {
-             dest: 'dist',
+             dest: 'distGrunt',
+             staging:'temp',
              src: ['contactus.html','aboutus.html','index.html']
          },
          options: {
@@ -140,8 +141,8 @@ module.exports = function (grunt) {
          // in dist directory
              files: [{
                  src: [
-                     'dist/js/*.js',
-                     'dist/css/*.css',
+                     'distGrunt/js/*.js',
+                     'distGrunt/css/*.css',
                  ]
              }]
          }
@@ -152,9 +153,9 @@ module.exports = function (grunt) {
      // options.assetDirs contains the directories for finding the assets
      // according to their relative paths
      usemin: {
-         html: ['dist/contactus.html','dist/aboutus.html','dist/index.html'],
+         html: ['distGrunt/contactus.html','distGrunt/aboutus.html','distGrunt/index.html'],
          options: {
-             assetsDirs: ['dist', 'dist/css','dist/js']
+             assetsDirs: ['distGrunt', 'distGrunt/css','distGrunt/js']
          }
      },
 
@@ -164,9 +165,9 @@ module.exports = function (grunt) {
                  collapseWhitespace: true
              },
              files: {                                   // Dictionary of files
-                 'dist/index.html': 'dist/index.html',  // 'destination': 'source'
-                 'dist/contactus.html': 'dist/contactus.html',
-                 'dist/aboutus.html': 'dist/aboutus.html',
+                 'distGrunt/index.html': 'distGrunt/index.html',  // 'destination': 'source'
+                 'distGrunt/contactus.html': 'distGrunt/contactus.html',
+                 'distGrunt/aboutus.html': 'distGrunt/aboutus.html',
              }
          }
      }
